@@ -1,0 +1,13 @@
+ title_name = "Forza Motorsport 4"
+ title_id = "4D530910"
+ hash = "AE792356E8071FF6" 
+
+[[patch]]
+    name = "Fix Photomode Car Focus"
+    desc = "Original game bug/fix - sets an internal value named CarInFocus from 0.99 to 1.0 so the focused car is sharp regardless of motion blur"
+    author = "TheAdmiester"
+    is_enabled = true
+
+    [[patch.f32]]
+        address=0x82d87968
+        value=1.0
