@@ -6,7 +6,7 @@
     name = "Fix Photomode Car Focus"
     desc = "Original game bug/fix - sets an internal value named CarInFocus from 0.99 to 1.0 so the focused car is sharp regardless of motion blur"
     author = "TheAdmiester"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.f32]]
         address=0x82d87968
