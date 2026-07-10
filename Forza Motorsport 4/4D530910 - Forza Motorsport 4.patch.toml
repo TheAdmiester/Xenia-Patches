@@ -61,7 +61,7 @@
 
 [[patch]]
     name = "Enable Media Directory Overriding"
-    desc = "Advanced use only - allows files to be loaded from <game dir>\update\media.zip to override base game files"
+    desc = "Advanced use only - allows files to be loaded from <game dir>\\update\\media.zip to override base game files"
     author = "TheAdmiester"
     is_enabled = false
     
