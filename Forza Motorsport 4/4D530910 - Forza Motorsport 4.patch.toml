@@ -11,3 +11,61 @@
     [[patch.f32]]
         address=0x82d87968
         value=1.0
+
+[[patch]]
+    name = "Enable Big Shot Mode"
+    desc = "Re-enables Big Shot mode which originally required Xbox Live. Pictures will appear to fail when starting to upload but can be pulled from cache:\ForzaBigshot.bmp"
+    author = "TheAdmiester"
+    is_enabled = false
+
+    # Set ForzaUI::CPhotoModeWithEffectsBase::CanTakeBigShot to always return 1
+    [[patch.be32]]
+        address = 0x825B3CC0
+        value = 0x39600001
+        
+[[patch]]
+    name = "8K Big Shot Resolution"
+    author = "TheAdmiester"
+    is_enabled = false
+
+    # Edit call to CRenderThread::RequestLargeShot from 3840x2160 to 7840x4320
+    [[patch.be32]]
+        address = 0x825B4264
+        value = 0x38A010E0
+
+    [[patch.be32]]
+        address = 0x825B4268
+        value = 0x38801E00
+
+[[patch]]
+    name = "Remove 100cr Prize Sell Cap"
+    author = "TheAdmiester"
+    is_enabled = false
+
+    # CGarage::CalculateSalePrice - Skip branch that overrides car sell price when prize flag is present on garage car
+    [[patch.be32]]
+        address = 0x8240943C
+        value = 0x48000010
+
+[[patch]]
+    name = "Skip Intro"
+    author = "TheAdmiester"
+    is_enabled = false
+    
+    # Change the double pointed to by the disclaimer screen timer from 6.0 to 0.0
+    # CForza::InitSplash
+    [[patch.be32]]
+        address = 0x826D5264
+        value = 0xC80B1580
+
+
+[[patch]]
+    name = "Enable Media Directory Overriding"
+    desc = "Advanced use only - allows files to be loaded from <game dir>\update\media.zip to override base game files"
+    author = "TheAdmiester"
+    is_enabled = false
+    
+    # Switch string pointer from update:\media.zip to game:\update\media.zip
+    [[patch.be32]]
+        address = 0x82D5CD44
+        value = 0x8200EB0C
