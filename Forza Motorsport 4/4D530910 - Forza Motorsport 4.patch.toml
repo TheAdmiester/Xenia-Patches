@@ -14,7 +14,7 @@
 
 [[patch]]
     name = "Enable Big Shot Mode"
-    desc = "Re-enables Big Shot mode which originally required Xbox Live. Pictures will appear to fail when starting to upload but can be pulled from cache:\ForzaBigshot.bmp"
+    desc = "Re-enables Big Shot mode which originally required Xbox Live. Pictures will appear to fail when starting to upload but can be pulled from cache:\\ForzaBigshot.bmp"
     author = "TheAdmiester"
     is_enabled = false
 
